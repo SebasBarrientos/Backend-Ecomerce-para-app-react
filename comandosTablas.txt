@@ -1,0 +1,26 @@
+sequelize model:generate --name Product --attributes name:string,description:string,size:string,price:decimal(10,2),stock:integer
+sequelize model:generate --name Category --attributes name:string
+sequelize model:generate --name User --attributes name:string,email:string,password:string,role:string
+sequelize model:generate --name Order --attributes date:string,UserId:integer,dateOfOrder:date
+sequelize model:generate --name ProductsCategory --attributes ProductId:integer,CategoryId:integer
+sequelize model:generate --name OrdersProduct --attributes OrderId:integer,ProductId:integer
+sequelize model:generate --name Review --attributes title:string,text:string,ProductId:integer,UserId:integer
+
+sequelize model:generate --name Token --attributes token:string,UserId:integer
+sequelize migration:generate --name image
+
+
+nombre del modelo en singular (--name singular)
+
+
+
+
+
+
+
+
+
+-------------Front
+hacer un archivo js donde este la funcion de logout e importarla en todos los otros js
+Multer en el log vemos como me devuelve el nombre del file. Ahora resta crear un campo para hacer el path...
+                    hay que tirar la tabla y levantar
